@@ -11,12 +11,12 @@ const selectUser = (id) => {
 const insertUser = (data) => {
   const {id, name, email, phone_number, gender, birth_date, image} = data;
   return Pool.query(`INSERT INTO users(id, name, email, phone_number, gender, birth_date, image)
-  VALUES (${id}, '${name}', '${email}', ${phone_number}, '${gender}', ${birth_date}, '${image}')`);
+  VALUES (${id}, '${name}', '${email}', ${phone_number}, '${gender}', '${birth_date}', '${image}')`);
 };
 
 const updateUser = (data) => {
   const {id, name, email, phone_number, gender, birth_date, image} = data;
-  return Pool.query(`UPDATE users SET name='${name}', email='${email}', phone_number=${phone_number}, gender='${gender}', birth_date =${birth_date}, image='${image}' WHERE id =${id}`);
+  return Pool.query(`UPDATE users SET name='${name}', email='${email}', phone_number=${phone_number}, gender='${gender}', birth_date ='${birth_date}', image='${image}' WHERE id =${id}`);
 };
 
 const deleteUser = (id) => {
